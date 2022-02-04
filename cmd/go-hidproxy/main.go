@@ -76,7 +76,7 @@ var Scancodes = map[uint16]uint16{
 	51:  54, // <
 	52:  55, // >
 	53:  56, // ?
-	41:  50, // //
+	41:  53, // `
 	43:  49, // \
 	30:  4,  // a
 	48:  5,  // b
@@ -111,28 +111,49 @@ var Scancodes = map[uint16]uint16{
 	107: 77, // End
 	110: 73, // Insert
 	119: 72, // Pause
-	//70: 71, // ScrLk
+	69:  83, // NumLock
+	70:  71, // ScrLk
 	99:  70,  // PrtSc
 	87:  68,  // F11
 	88:  69,  // F12
 	113: 127, // Mute
 	114: 129, // VolDn
 	115: 128, // VolUp
-	58:  57,  // CapsLock (non-locking)
+	58:  130, //57,  // CapsLock (non-locking)
 	158: 122, // "Undo" (Thinkpad special key)
 	159: 121, // "Again" (Thinkpad special key)
 	29:  224, // Left-Ctrl
-	125: 227, // Left-Cmd
+	125: 118, // Keyboard Menu
 	42:  225, // Left-Shift
 	56:  226, // Left-Alt
 	100: 230, // AltGr (Right-Alt)
-	127: 231, // Right-Cmd
+	126: 231  //Right-Cmd
+	127: 227, // Left-Cmd
 	97:  228, // Right-Ctrl
 	54:  229, // Right-Shift
 	111: 76,  // Delete
 	164: 232, // Play-Pause
 	165: 234, // Previous-Track
 	163: 233, // Next-Track
+	
+	//KEY/NUM PAD
+	
+	98: 0x54, // Keypad /
+	55: 0x55, // Keypad *
+	74: 0x56, // Keypad -
+	78: 0x57, // Keypad +
+	96: 0x58, // Keypad ENTER
+	79: 0x59, // Keypad 1 and End
+	80: 0x5a, // Keypad 2 and Down Arrow
+	81: 0x5b, // Keypad 3 and PageDn
+	75: 0x5c, // Keypad 4 and Left Arrow
+	76: 0x5d, // Keypad 5
+	77: 0x5e, // Keypad 6 and Right Arrow
+	71: 0x5f, // Keypad 7 and Home
+	72: 0x60, // Keypad 8 and Up Arrow
+	73: 0x61, // Keypad 9 and Page Up
+	82: 0x62, // Keypad 0 and Insert
+	83: 0x63, // Keypad . and Delete
 }
 
 const (
