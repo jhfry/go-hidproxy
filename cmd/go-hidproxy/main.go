@@ -119,7 +119,7 @@ var Scancodes = map[uint16]uint16{
 	113: 127, // Mute
 	114: 129, // VolDn
 	115: 128, // VolUp
-	58:  130, //57,  // CapsLock (non-locking)
+	58:  57,  // CapsLock (non-locking)
 	158: 122, // "Undo" (Thinkpad special key)
 	159: 121, // "Again" (Thinkpad special key)
 	29:  224, // Left-Ctrl
