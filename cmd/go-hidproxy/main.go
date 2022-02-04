@@ -123,12 +123,12 @@ var Scancodes = map[uint16]uint16{
 	158: 122, // "Undo" (Thinkpad special key)
 	159: 121, // "Again" (Thinkpad special key)
 	29:  224, // Left-Ctrl
-	125: 118, // Keyboard Menu
+	127: 118, // Keyboard Menu
 	42:  225, // Left-Shift
 	56:  226, // Left-Alt
 	100: 230, // AltGr (Right-Alt)
 	126: 231, //Right-Cmd
-	127: 227, // Left-Cmd
+	125: 227, // Left-Cmd
 	97:  228, // Right-Ctrl
 	54:  229, // Right-Shift
 	111: 76,  // Delete
