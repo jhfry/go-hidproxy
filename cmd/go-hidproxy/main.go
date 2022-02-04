@@ -127,7 +127,7 @@ var Scancodes = map[uint16]uint16{
 	42:  225, // Left-Shift
 	56:  226, // Left-Alt
 	100: 230, // AltGr (Right-Alt)
-	126: 231  //Right-Cmd
+	126: 231, //Right-Cmd
 	127: 227, // Left-Cmd
 	97:  228, // Right-Ctrl
 	54:  229, // Right-Shift
