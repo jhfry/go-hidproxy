@@ -453,6 +453,28 @@ func HandleMouse(output chan<- error, input chan<- InputMessage, close <-chan bo
 				buttonOp = true
 			}
 		}
+		
+		if event.Type == evdev.EV_ABS {
+			mouseToSend := make([]uint8, 0)
+			mouseToSend = append(mouseToSend, buttons)
+			
+			if event.Code == 0 {
+				mouseToSend = append(mouseToSend, uint8(event.Value))
+				mouseToSend = append(mouseToSend, 0x00)
+				mouseToSend = append(mouseToSend, 0x00)
+			}
+			if event.Code == 1 {
+				mouseToSend = append(mouseToSend, 0x00)
+				mouseToSend = append(mouseToSend, uint8(event.Value))
+				mouseToSend = append(mouseToSend, 0x00)
+			}
+			if event.Code == 11 {
+				mouseToSend = append(mouseToSend, 0x00)
+				mouseToSend = append(mouseToSend, 0x00)
+				mouseToSend = append(mouseToSend, uint8(event.Value))
+			}
+		}
+		
 		if event.Type == evdev.EV_REL || buttonOp {
 			mouseToSend := make([]uint8, 0)
 			mouseToSend = append(mouseToSend, buttons)
@@ -714,6 +736,9 @@ func main() {
 			isKeyboard := false
 			for k := range dev.Capabilities {
 				if k.Name == "EV_REL" {
+					isMouse = true
+				}
+				if k.Name == "EV_ABS" {
 					isMouse = true
 				}
 				if k.Name == "EV_KEY" {
