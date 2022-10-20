@@ -1,4 +1,4 @@
-module github.com/rosmo/go-hidproxy
+module github.com/jhfry/go-hidproxy
 
 require (
 	github.com/gvalkov/golang-evdev v0.0.0-20191114124502-287e62b94bcb
