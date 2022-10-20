@@ -1,3 +1,7 @@
+# This fork of rosmo's ealier work, with some contributions from fkahhaleh, will seek to add support for absolute mouse positioning.  This is useful for my particular use case (Across Center).
+
+#THIS IS INCOMPLETE AND WILL LIKELY NOT WORK AT THIS TIME
+
 # go-hidproxy
 
 Proxies Bluetooth keyboards and mouse as HID devices (eg. with Raspberry Zero Pi W)
@@ -9,7 +13,7 @@ Requires `libudev-dev` package (`sudo apt install libudev-dev`).
 Build with Go 1.11+:
 
 ```sh
-go get github.com/rosmo/go-hidproxy/cmd/go-hidproxy
+go get github.com/jhfry/go-hidproxy/cmd/go-hidproxy
 sudo cp ~/go/bin/go-hidproxy /usr/sbin/go-hidproxy
 ```
 
