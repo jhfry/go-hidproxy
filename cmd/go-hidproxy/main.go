@@ -707,7 +707,7 @@ func main() {
 		default:
 		}
 
-		log.Info("Polling for new devices in /dev/input\n")
+		log.Debug("Polling for new devices in /dev/input\n")
 		devices, _ := evdev.ListInputDevices()
 		for _, dev := range devices {
 			isMouse := false
