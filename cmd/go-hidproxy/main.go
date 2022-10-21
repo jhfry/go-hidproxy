@@ -745,7 +745,7 @@ func main() {
 					isKeyboard = true
 				}
 			}
-			log.Debugf("Device %s (%s), capabilities: %v (mouse=%t, kbd=%t)", dev.Name, dev.Fn, dev.Capabilities, isMouse, isKeyboard)
+			//log.Debugf("Device %s (%s), capabilities: %v (mouse=%t, kbd=%t)", dev.Name, dev.Fn, dev.Capabilities, isMouse, isKeyboard)
 			if isKeyboard || isMouse {
 				devId := InputDevice{
 					Device: dev.Fn,
